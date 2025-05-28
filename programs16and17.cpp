@@ -56,7 +56,7 @@ no tax gor first rs 1000
 5% for second rs 1000
 4% for third rs 1000
 3% for remain untaxed salary
-for example if the salary is 4000, then the tax is 120
+for example if the salary is  4000,  then the tax is 120
 */
 
 #include<iostream>     // include the iostream library (a preprocessor directive)
