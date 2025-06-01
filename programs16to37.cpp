@@ -103,3 +103,50 @@ Program to calculate tax on salary
 Enter your salary : 4000
 The tax on your salary is :120
 	*/
+
+
+
+
+
+
+	//Write a program that calculates greatest common divisor of two numbers using recursion
+
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+int gcd ( int a, int b ); // function prototype declaration
+int main ()               // main function from where execution starts
+
+{
+	int a,b;
+
+	cout<<"Program to calculate greatest common divisor of two numbers\n";
+	cout<<"Enter first number : ";
+	cin>>a;
+	cout<<"Enter second number : ";
+	cin>>b;
+	
+  int c=	gcd(a,b);
+  
+  cout<<"The greatest common divisor of "<<a<<" and "<<b<<" is :"<<c;
+   return 0; //return 0 to operating system
+}
+
+// function to calculate greatest common divisor of two numbers
+ 
+ int gcd (int a1,int b1)
+ {
+ 	if(b1==0) {
+ 		return a1;
+	 }
+	 else {
+	 	return gcd(b1,a1%b1);
+	 }
+ }
+
+ /*
+ output:
+Program to calculate greatest common divisor of two numbers
+Enter first number : 48
+Enter second number : 18
+The greatest common divisor of 48 and 18 is :6
+ */
