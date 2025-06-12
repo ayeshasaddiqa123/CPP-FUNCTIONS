@@ -5,7 +5,7 @@ CODE WISE SOLUTION OF IT SERIES' PROGRAM
 
 page : 349
 
-Best choice of book  for students learning in compter science semesteer first.
+Best choice   for students  in compter science semester first.
 
 
 
