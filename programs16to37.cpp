@@ -108,7 +108,7 @@ The tax on your salary is :120
 
 
 
-
+// program 18
 	//Write a program that calculates greatest common divisor of two numbers using recursion
 
 #include<iostream>     // include the iostream library (a preprocessor directive)
@@ -150,3 +150,59 @@ Enter first number : 48
 Enter second number : 18
 The greatest common divisor of 48 and 18 is :6
  */
+
+
+
+
+
+
+
+
+
+// program 19
+
+// Write a program that calculates and displays the faboncci series f a number using recursive function.
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+int fibonacci ( int n ); // function prototype declaration
+int main ()               // main function from where execution starts
+
+{
+	int n;
+
+	cout<<"Program to calculate fibonacci series of a number\n";
+	cout<<"Enter the number of terms in fibonacci series : ";
+	cin>>n;
+	
+  cout<<"The fibonacci series is : ";
+  for(int i=0;i<n;i++) {
+  	cout<<fibonacci(i)<<" ";
+  }
+  
+   return 0; //return 0 to operating system
+}
+// function to calculate fibonacci series of a number
+ 
+ int fibonacci (int n1)
+ {
+ 	if(n1==0) {
+ 		return 0;
+	 }
+	 else if(n1==1) {
+	 	return 1;
+	 }
+	 else {
+	 	return fibonacci(n1-1) + fibonacci(n1-2);
+	 }
+ }
+
+ /*
+ output:
+Program to calculate fibonacci series of a number
+Enter the number of terms in fibonacci series : 10
+The fibonacci series is : 0 1 1 2 3 5 8 13 21 34 
+ */
+
+
+ 
+
