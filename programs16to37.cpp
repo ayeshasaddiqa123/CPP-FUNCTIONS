@@ -206,3 +206,63 @@ The fibonacci series is : 0 1 1 2 3 5 8 13 21 34
 
  
 
+
+ // program 20
+ // Write a program that displays the sum of following  series using function.
+// x-(x^2)/2!+(x^3)/3!-x(x^4)/4!.......+(x^16)/16! ! represents fatorial
+
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+double series_sum ( double x ); // function prototype declaration
+int main ()               // main function from where execution starts
+
+{
+	double x;
+
+	cout<<"Program to calculate sum of series\n";
+	cout<<"Enter the value of x : ";
+	cin>>x;
+	
+  double c=	series_sum(x);
+  
+  cout<<"The sum of series is :"<<c;
+   return 0; //return 0 to operating system
+}
+// function definition
+double series_sum (double x1)
+ {
+ 	double sum=0.0;
+ 	double term=1.0;
+	
+ 	for(int i=1;i<=16;i++) {
+		 int fact=1;
+		for (int j=1;j<=i;j++) {
+			fact = fact * j; // calculate factorial
+			}
+			
+
+
+ 		term = term * x1 / fact; // calculate the term
+ 		if(i%2==0) {
+ 			sum += term; // add to sum if even
+		 }
+		 else {
+		 	sum -= term; // subtract from sum if odd
+		 }
+	 }
+	return sum;    // return the sum
+
+ }
+
+ /*
+ output:
+Program to calculate sum of series
+Enter the value of x : 2
+The sum of series is :0.9999999999999999
+ */
+
+
+
+
+// program 21
+
