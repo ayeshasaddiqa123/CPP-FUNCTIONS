@@ -174,7 +174,85 @@ int cube(int a)
 
 
 
+// program 21
 
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+void AVG (int ,int);
+int main ()               // main function from where execution starts
+{
+	int runs,balls;
+	
+	cout<<"Enter runs :";
+	cin>>runs;
+	cout<<"Enter balls";
+	cin>>balls;
+	
+	AVG(runs,balls);
+	
+   return 0; //return 0 to operating system
+}
+void AVG (int r,int b)
+{
+cout<<"Averge score is :"	<< float ( r * 60) / b;
+}
+
+
+
+// program 22
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+int digits (int);
+int main ()               // main function from where execution starts
+{
+	int num;
+	cout << "Enter a number to count its digit :";
+	cin >> num;
+	
+   cout<<"Total digits in a number is :"<<digits(num); 
+   
+   return 0; //return 0 to operating system
+}
+int digits (int num)
+{
+	int dig=0;
+	while(num!=0)
+	{
+		int num=num%10;
+		
+		dig++;
+		num=num/10;
+	 }
+	 return dig;
+}
+
+
+
+
+// program 23
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+int max(int arr[5]);
+int main ()               // main function from where execution starts
+{
+	int arr[5];
+	cout<<"Enter five numbers in array :";
+	for(int i=0;i<5;i++) {
+		cin>>arr[i];
+}
+cout<<"The maximum number in array is :"<<max(arr);
+
+   return 0; //return 0 to operating system
+}
+int max(int arr[5])
+{
+	int maximum=arr[0];
+  	for(int i=0;i<5;i++) {
+		if(arr[i]>maximum)
+		maximum=arr[i];
+}	
+return maximum;
+}
 
 
 
