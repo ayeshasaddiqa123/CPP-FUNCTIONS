@@ -255,4 +255,73 @@ return maximum;
 }
 
 
+// program 24
+
+//write a program that gets two numbers one should be passed by Value and the other should be passed by reference and then check original variables wether their values are cangr or not usin c++
+
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+void passbyvalue(int);
+void passbyreference(int &);
+int main ()               // main function from where execution starts
+{
+	int a=10,b=20;
+	cout<<"Before passing by value and reference :"<<endl;
+	cout<<"a = "<<a<<", b = "<<b<<endl;
+	
+	passbyvalue(a);
+	passbyreference(b);
+	
+	cout<<"After passing by value and reference :"<<endl;
+	cout<<"a = "<<a<<", b = "<<b<<endl;
+
+   return 0; //return 0 to operating system
+}
+void passbyvalue(int x)
+{
+	x=30; // this will not change the original variable
+}
+void passbyreference(int &y)
+{
+	y=40; // this will change the original variable
+}
+
+// output:
+// Before passing by value and reference :
+// a = 10, b = 20
+// After passing by value and reference :
+// a = 10, b = 40		
+
+ 
+
+// program 25
+
+ //a program that inputs a value pass it to function and that displays the prime factors of a given number
+#include<iostream>     // include the iostream library (a preprocessor directive)
+using namespace std;     // use the stanadard namespace
+void prime_factors(int);
+int main ()               // main function from where execution starts
+{
+	int num;
+	cout<<"Enter a number to find its prime factors :";
+	cin>>num;
+	
+	prime_factors(num);
+	
+   return 0; //return 0 to operating system
+}
+void prime_factors(int n)
+{
+	cout << "Prime factors of " << n << " are: ";
+	for (int i = 2; i <= n; i++)
+	{
+		while (n % i == 0)
+		{
+			cout << i << " ";
+			n /= i;
+		}
+	}
+	cout << endl;
+}			
+
 
